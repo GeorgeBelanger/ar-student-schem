@@ -9,7 +9,7 @@ describe Student, "#name and #age" do
     raise RuntimeError, "be sure to run 'rake db:migrate' before running these specs" unless expect(ActiveRecord::Base.connection.table_exists?(:students)).to eq(true)
     Student.delete_all
 
-    @student = Student.new 
+    @student = Student.new
     @student.assign_attributes(
       :first_name => "Happy",
       :last_name => "Gilmore",
