@@ -2,6 +2,7 @@
 ## The purpose of this repository is to test a many to many object using rspec
 
 
+
 ### Tests
 For testing we raise an error if the db hasn't been migrated yet, valdiated by the table_exists?(:students) equaling true. To test the name and age method, it tests wheter @student responds to the method being called from an array with name and age, and tests whether it returns the correct age and name. We test creating a student with valid info to get past the validators and assign invalid emails to see if the regex validators work. We test the age validator as well as the phone regex validator. To test whether or not there are timestamps when migration happens, we look at every column in the students table to see if there is a created_at and a updated_at. If the column exists and has the proper datatype, found_column_at is changed to true and if both are true the test passes. Lastly, we validate the datatypes of our columns.
 
